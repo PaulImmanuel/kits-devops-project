@@ -4,9 +4,9 @@ kind: Service
 metadata:
   name: my-web-app-service
 spec:
-  [cite_start]type: LoadBalancer # Exposes the app with a public IP 
+  type: LoadBalancer # Exposes the app with a public IP
   ports:
   - port: 80
     targetPort: 8080
-  selector:
+  selector:    # <-- Corrected: Indented to be part of 'spec'
     app: my-web-app
