@@ -14,9 +14,9 @@ env:
   RESOURCE_GROUP_NAME: "devops-project-rg"
   AKS_CLUSTER_NAME: "devops-project-aks"
   # Example: ACR_NAME: "kitsdevopsacr1a2b3c"
-  ACR_NAME: "YOUR_ACR_NAME_HERE"
+  ACR_NAME: "kitsdevopsacr1a092dbd182e"
   # Example: ACR_LOGIN_SERVER: "kitsdevopsacr1a2b3c.azurecr.io"
-  ACR_LOGIN_SERVER: "YOUR_ACR_LOGIN_SERVER_HERE"
+  ACR_LOGIN_SERVER: "kitsdevopsacr1a092dbd182e.azurecr.io"
   IMAGE_NAME: "my-web-app"
   
 jobs:
@@ -78,4 +78,4 @@ jobs:
         echo "Waiting for pods to be ready..."
         sleep 10
         kubectl get pods
-        kubectl get svc
+        kubectl get svc 
