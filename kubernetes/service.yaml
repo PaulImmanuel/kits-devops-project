@@ -1,0 +1,12 @@
+# File: kubernetes/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-web-app-service
+spec:
+  [cite_start]type: LoadBalancer # Exposes the app with a public IP 
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: my-web-app

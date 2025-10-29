@@ -1,0 +1,20 @@
+# File: kubernetes/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-web-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-web-app
+  template:
+    metadata:
+      labels:
+        app: my-web-app
+    spec:
+      containers:
+      - name: my-web-app
+        image: __ACR_LOGIN_SERVER__/__IMAGE_NAME__:__TAG__ # Placeholders
+        ports:
+        - containerPort: 8080

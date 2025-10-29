@@ -1,0 +1,10 @@
+# File: .gitignore
+node_modules
+.DS_Store
+*.log
+
+# Terraform files
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
